@@ -27,8 +27,6 @@ Our Corner is a mini social platform built for small local communities. It provi
 * [Deployment](#Deployment)
 
 * [Testing](#Testing)
-  * [Manual Functionality Testing](#Manual-Functionality-Testing)
-  * [Device Responsivity Testing](#Device-Responsivity-Testing)
 
 * [Validation](#Validation)
 
@@ -216,13 +214,10 @@ Wireframes were created based on the initial page layout designs for various scr
 
 The back-end databases were designed at the start of the project with the intention of remaining unchanged throughout the development in order to avoid later complications. The Entity Relationship Diagram (ERD) can be viewed below:
 
-***ERD STILL PENDING - EXAMPLE BELOW***
-
-![< ERD >](/readme-docs/erd.png)
+[View Social Platform ERD](/readme-docs/marketplace-stuff/social-ERD.png)
 
 ### Features
 
-***[Arun's section]***
 #### Site header
 
   ![< Site header >](/readme-docs/feature-site-header.png)
@@ -245,9 +240,6 @@ The back-end databases were designed at the start of the project with the intent
 
   * Retains same colour scheme as the site header for thematic consistency
 
-***[Mortaza's section]***
-
-***[Adam's section]***
 #### Main feed page
 
 ![Main feed page](readme-docs/feed/feature-main-page.png)
@@ -342,7 +334,6 @@ The back-end databases were designed at the start of the project with the intent
 
 - After a user creates a comment, it goes into awaiting approval status. Only the user themselves can see this comment. It will only be shown to all site users once an admin/superuser approves it.
 
-***[Ysabela's section]***
 #### Events
 
   <img src="readme-docs/events/events-feed.png" alt="All events - feed" width="70%">
@@ -402,8 +393,6 @@ The back-end databases were designed at the start of the project with the intent
   <img src="readme-docs/events/my-events-delete-event.png" alt="My Events - delete event" width="70%">
 
   * Users can delete their hosted event
-
-***[Rich's section]***
 
 #### Future implementations:
 
@@ -500,84 +489,10 @@ Heroku was used to deploy the live application. The instructions to achieve this
 
 ## Testing
 
-### Manual Functionality Testing
-
-***MANUAL FUNCTIONALITY TESTING PENDING - EXAMPLE BELOW***
-
-Manual testing was carried out to ensure functionality of all processes was as expected. The results of these tests are below:
-
-| **Site Area**         | **User Action**                                                                                      | **Expected Result**                                                                                                                       | **Pass/Fail** |
-|-----------------------|------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|--------------|
-| Header                | Click site logo/title                                                                                | Redirect to Feed page                                                                                                                     | Pass         |
-| Header                | Click Sign Up button                                                                                 | Redirect to Sign Up page                                                                                                                  | Pass         |
-| Sign Up page          | Fill out Sign Up form correctly and click Submit                                                     | Redirect to Feed page as new logged-in user, displaying feedback message at top of page                                                  | Pass         |
-| Sign Up page          | Fill out Sign Up form incorrectly and click Submit                                                   | Validation error displays with instructions to amend                                                                                      | Pass         |
-| Header                | Click Log In button                                                                                  | Redirect to Log In page                                                                                                                   | Pass         |
-| Log In page           | Fill out Log In form correctly and click Submit                                                      | Redirect to Feed page as logged-in user, displaying feedback message at top of page                                                      | Pass         |
-| Log In page           | Fill out Log In form incorrectly and click Submit                                                    | Validation error displays with instructions to amend                                                                                      | Pass         |
-| Header                | Click Log Out button                                                                                 | Redirect to Log Out page                                                                                                                  | Pass         |
-| Log Out page          | Click Log Out button                                                                                 | Redirect to Feed page as logged-out user, displaying feedback message at top of page                                                     | Pass         |
-| Nav icons             | Click Home icon                                                                                      | Redirect to Feed page                                                                                                                     | Pass         |
-| Nav icons             | Click Reviews icon                                                                                   | Redirect to Puzzle List page                                                                                                              | Pass         |
-| Nav icons             | Click Leaderboards icon                                                                              | Redirect to Leaderboards page                                                                                                             | Pass         |
-| Feed page             | Click Sign Up button                                                                                 | Redirect to Sign Up page                                                                                                                  | Pass         |
-| Feed page             | Click New Post button                                                                                | Redirect to Create a Post page                                                                                                            | Pass         |
-| Create a Post page    | Fill out Create a Post form and click Submit                                                         | Redirect to Feed page with new unapproved post at top of feed, displaying feedback message at top of page                                | Pass         |
-| Feed page             | Click Edit button on user-owned post                                                                 | Redirect to Edit Post page                                                                                                                | Pass         |
-| Edit Post page        | Update Post form and click Save                                                                      | Redirect to Post Detail page for that post displaying updated and now unapproved post, also displaying feedback message at top of page   | Pass         |
-| Feed page             | Click Delete button on user-owned post                                                               | Display Delete Post modal                                                                                                                 | Pass         |
-| Delete Post modal     | Click X button                                                                                       | Closes modal                                                                                                                              | Pass         |
-| Delete Post modal     | Click Cancel button                                                                                  | Closes modal                                                                                                                              | Pass         |
-| Delete Post modal     | Click Delete button                                                                                  | Deletes post and redirects to Feed page, displaying feedback message at top of page                                                      | Pass         |
-| Feed page             | Click View Post button on a post                                                                     | Redirect to Post Detail page of that post                                                                                                 | Pass         |
-| Feed page             | Click Previous pagination button                                                                     | Go to previous page of feed                                                                                                               | Pass         |
-| Feed page             | Click Next pagination button                                                                         | Go to next page of feed                                                                                                                   | Pass         |
-| Post Detail page      | Click Edit button on user-owned post                                                                 | Redirect to Edit Post page                                                                                                                | Pass         |
-| Edit Post page        | Update Post form and click Save                                                                      | Redirect to Post Detail page for that post displaying updated and now unapproved post, also displaying feedback message at top of page   | Pass         |
-| Post Detail page      | Click Delete button on user-owned post                                                               | Display Delete Post modal                                                                                                                 | Pass         |
-| Delete Post modal     | Click X button                                                                                       | Closes modal                                                                                                                              | Pass         |
-| Delete Post modal     | Click Cancel button                                                                                  | Closes modal                                                                                                                              | Pass         |
-| Delete Post modal     | Click Delete button                                                                                  | Deletes post and redirects to Feed page, displaying feedback message at top of page                                                      | Pass         |
-| Post Detail page      | Fill out Comment form and click Submit                                                               | New unapproved comment shows in comment list, and feedback message displays at top of page                                               | Pass         |
-| Post Detail page      | Click Edit button on user-owned comment                                                              | Redirect to Edit Comment page                                                                                                             | Pass         |
-| Edit Comment page     | Update Comment form and click Save                                                                   | Redirect to Post Detail page of related post, displaying updated and now unapproved comment, also displaying feedback message at top of page     | Pass         |
-| Post Detail page      | Click Delete button on user-owned comment                                                            | Display Delete Comment modal                                                                                                              | Pass         |
-| Delete Comment modal  | Click X button                                                                                       | Closes modal                                                                                                                              | Pass         |
-| Delete Comment modal  | Click Cancel button                                                                                  | Closes modal                                                                                                                              | Pass         |
-| Delete Comment modal  | Click Delete button                                                                                  | Deletes comment and redirects to related post's Post Detail page, displaying feedback message at top of page                             | Pass         |
-| Puzzle List page      | Click See Reviews button on a puzzle                                                                 | Redirects to Puzzle Detail page                                                                                                           | Pass         |
-| Puzzle List page      | Click Previous pagination button                                                                     | Go to previous page of Puzzle List                                                                                                        | Pass         |
-| Puzzle List page      | Click Next pagination button                                                                         | Go to next page of Puzzle List                                                                                                            | Pass         |
-| Puzzle Detail page    | Fill out Review form and click Submit                                                                | New unapproved review shows in review list, displaying feedback message at top of page                                                   | Pass         |
-| Puzzle Detail page    | Click Edit button on user-owned review                                                               | Redirect to Edit Review page                                                                                                              | Pass         |
-| Edit Review page      | Update Review form and click Submit                                                                  | Redirect to Puzzle Detail page of related puzzle, displaying updated and now unapproved review, and displaying feedback message at top of page   | Pass         |
-| Puzzle Detail page    | Click Delete button on user-owned review                                                             | Display Delete Review modal                                                                                                               | Pass         |
-| Puzzle Detail page    | Click X button                                                                                       | Closes modal                                                                                                                              | Pass         |
-| Puzzle Detail page    | Click Cancel button                                                                                  | Closes modal                                                                                                                              | Pass         |
-| Puzzle Detail page    | Click Delete button                                                                                  | Deletes review and redirects to related puzzle's Puzzle Detail page, displaying feedback message at top of page                          | Pass         |
-| Leaderboards page     | Click Sign Up button                                                                                 | Redirects to Sign Up page                                                                                                                 | Pass         |
-| Leaderboards page     | Click Submit Time button                                                                             | Redirects to Submit Time page                                                                                                             | Pass         |
-| Submit Time page      | Fill out Submit Time form correctly and click submit                                                 | Redirect to Leaderboards page with submitted time now showing in relevant puzzle's leaderboard                                           | Pass         |
-| Submit Time page      | Fill out Submit Time form incorrectly and click submit                                               | Validation error displays with instructions to amend                                                                                      | Pass         |
-| Submit Time page      | Fill out Submit Time form for puzzle that already has your time                                      | Error message displays advising that only one time can be submitted per puzzle                                                           | Pass         |
-| Leaderboards page     | Click Update Time button                                                                             | Redirect to Update Time page                                                                                                              | Pass         |
-| Update Time page      | Fill out Update Time form correctly and click submit                                                 | Redirect to Leaderboards page with updated time now showing in relevant puzzle's leaderboard                                             | Pass         |
-| Update Time page      | Fill out Update Time form incorrectly and click submit                                               | Validation error displays with instructions to amend                                                                                      | Pass         |
-
-### Device Responsivity Testing
-
-***DEVICE RESPONSIVITY TESTING PENDING - EXAMPLE TEXT BELOW***
-
-Responsivity tests were carried out to ensure that the application displayed correctly on a number of different device sizes. For completeness, all of the default device sizes in Google Chrome's Developer Tools were tested for responsiveness by emulating each device and then navigating through the site to note any layout or formatting issues. Almost all devices returned zero issues with two exceptions, detailed below:
-
-- Microsoft Lumia 550: Dev Tools defaults to a landscape view for this device, which makes the viewport height very short, leading to a sub-optimal user experience. However, the application is not intended to be used in landscape mode on mobile devices, and in fact the default landscape view for this device in Dev Tools is a known error, with the expected view being portrait as is the case with most mobile devices. As such, this case is of no concern for this application.
-
-- JioPhone 2: The viewport for this device is very small at just 240 x 320 px (it is defined as a "compact device") which causes issues with layout. However, this application is not intended to be used on such small devices, and so is of no concern for this application.
-
 # Unit Testing
 
 ## Overview
-Comprehensive automated testing suite for the Hackathon Social Platform, covering all major applications and functionality.
+Comprehensive automated testing suite for the Our Corner application, covering all major applications and functionality.
 
 ## Test Statistics
 
@@ -865,19 +780,11 @@ This document contains comprehensive manual testing procedures for the Our Corne
 - Ensure pagination works correctly on all list views
 
 
-
-
 ## Validation
 
 Various validation software were used to validate and/or lint the code in each of the files written for this project. Most errors or bugs were identified and fixed, however some remain and will need to fixed in a further iteration of this project. Screenshots evidencing validation process below:
 
 ### [W3C Validator: HTML](https://validator.w3.org/)
-
-***[Arun's section]***
-
-***[Mortaza's section]***
-
-***[Adam's section]***
 
 Main Feed Page
 
@@ -895,7 +802,6 @@ Feed Search
 
 ![HTML validation results for feed search page](readme-docs/feed/html-validation-feed-search.png)
 
-***[Ysabela's section]***
 Events
 
 ![All events feed - html validation](/readme-docs/events/events-feed-html-val.png)
@@ -908,8 +814,6 @@ My Events
 
 ![My events - html validation](/readme-docs/events/my-events-html-val.png)
 
-***[Rich's section]***
-
 ### [W3C Validator: CSS](https://jigsaw.w3.org/css-validator/)
 
 style.css
@@ -919,8 +823,6 @@ marketplace.css
 ![CSS validation screenshot](/readme-docs/css-marketplace-validation.png)
 
 ### [CI Python Linter: Python](https://pep8ci.herokuapp.com/)
-
-***[Mortaza's section]***
 
 user/admin.py
 
@@ -954,8 +856,6 @@ user/views.py
 
 ![Python linter user/views.py screenshot](/readme-docs/python-linter-user-views.png)
 
-***[Adam's section]***
-
 feed/admin.py
 
 ![Python linter results for feed/admin.py](readme-docs/feed/python-linter-feed-admin.png)
@@ -988,7 +888,6 @@ feed/views.py
 
 ![Python linter results for feed/views.py](readme-docs/feed/python-linter-feed-views.png)
 
-***[Ysabela's section]***
 events/admin.py
 
 ![CI Python Linter - admin.py](/readme-docs/events/events-python-linter-admin.png)
@@ -1013,8 +912,6 @@ events/views.py
 
 ![CI Python Linter - views.py](/readme-docs/events/events-python-linter-views.png)
 
-***[Rich's section]***
-
 ### HTML Validation - Marketplace
 
 ![HTML validation marketplace screenshot](/readme-docs/marketplace-stuff/html-validation-marketplace.png)
@@ -1037,27 +934,17 @@ marketplace/views.py
 
 ![Python linter marketplace/views.py screenshot](/readme-docs/marketplace-stuff/python-linter-marketplace-views.png)
 
-### Entity Relationship Diagram
-
-[View Social Platform ERD](/readme-docs/marketplace-stuff/social-ERD.png)
-
 ### [WAVE: Web Accessibility Evaluation Tool](https://wave.webaim.org/)
 
 ![WAVE validation](/readme-docs/wave.png)
-
-***[Arun's section]***
 
 ### Lighthouse: Mobile
 
 ![Lighthouse mobile validation screenshot](/readme-docs/lighthouse-mobile.png)
 
-***[Arun's section]***
-
 ### Lighthouse: Desktop
 
 ![Lighthouse desktop validation screenshot](/readme-docs/lighthouse-desktop.png)
-
-***[Arun's section]***
 
 - - -
 
